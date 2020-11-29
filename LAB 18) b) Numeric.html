@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/JavaScript">
+        function check_number(x, msg) { var numericExpression =/^[0-9]+$/; if(x.value.match(numbericExpression)) { return true; }else { alert(msg); x.focus(); return false; } }
+    </script>
+</head>
+
+<body>
+    <form>
+        Enter Whole Number: <input type='text' id='numbers' /><br>
+        <input type='button' onclick="check_number(document.getElementById('numbers'),'Please Enter whole number only')" ; value='click Me' />
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script language="javascript">
+        function check() {
+            var field = document.f.t.value;
+            if (parseInt(field)) {
+                window.alert("it is Number");
+            } else {
+                window.alert("it is alphabetic");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name=f>
+        enter field value: <input type="text" name=t>
+        <input type="button" value=test onclick="check()">
+    </form>
+</body>
+
+</html>
