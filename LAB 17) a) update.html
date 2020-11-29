@@ -1,0 +1,37 @@
+<!DOCTYPE.html>
+<html>
+
+<head>
+    <title>Array</title>
+    <script>
+        arr = new Array();
+
+        function a() {
+            n = window.prompt("enter size of array");
+            alert("size is :" + n);
+            for (i = 0; i < n; i++) {
+                arr[i] = window.prompt("enter element");
+            }
+            alert("the elements are:" + arr);
+        }
+
+        function b() {
+            alert("Before modification" + arr);
+            d = arr.pop();
+            alert("Deleted element is :" + d);
+            el = window.prompt("enter element tp push");
+            arr.push(el);
+            arr = arr.concat(10, 12);
+            alert("After updation " + arr);
+        }
+    </script>
+</head>
+
+<body bgcolor=red>
+    <form>
+        <input type=button value="create" onClick=a()>
+        <input type=button value="update" onClick=b()>
+    </form>
+</body>
+
+</html>
