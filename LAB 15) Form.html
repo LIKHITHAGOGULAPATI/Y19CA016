@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function Form() {
+            var name =
+                document.forms["RegForm"]["Students'name"];
+            var email =
+                document.forms["RegForm"]["Age"];
+            var phone =
+                document.forms["RegForm"]["Father's name"];
+
+            if (Students 'name.value == "") { 
+                window.alert("Please enter your name.");
+                return false;
+            }
+
+            if (Age.value == "") {
+                window.alert("Please enter your age.");
+                Age.focus(18 - 25);
+                return false;
+            }
+
+            if (Father 's name.value == "") { 
+                window.alert(
+                    "Please enter a valid Fathers' name.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+    <style>
+        div {
+            box-sizing: border-box;
+            width: 100%;
+            border: 100px solid black;
+            float: left;
+            align-content: center;
+            align-items: center;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">REGISTRATION FORM</h1>
+    <form name="RegForm" action="/submit.php" onsubmit="return Form()" method="post">
+        <p>Student's name: <input type="text" size="65" name="Students'name" /></p>
+        <br />
+        <p>Age: <input type="text" size="65" name="Age" />
+        </p>
+        <br />
+        <p>Father's name: <input type="text" size="65" name="Father's name" /></p>
+        <br />
+        <p>
+            <input type="submit" value="send" name="Submit" />
+            <input type="reset" value="Reset" name="Reset" />
+        </p>
+    </form>
+</body>
+
+</html>
