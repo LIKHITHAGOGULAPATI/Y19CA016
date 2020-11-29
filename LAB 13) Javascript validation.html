@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        function validate() {
+            if (document.mobilenumbervalidation.mobileno.value == "" ||
+                isNaN(document.mobilenumbervalidation.mobileno.value) ||
+                document.mobilenumbervalidation.mobileno.value.length != 10) {
+                alert("If the number has 10 digits");
+                document.mobilenumbervalidation.mobileno.focus();
+
+                return false;
+            }
+            if (document.mobilenumbervalidation.phoneno.value == "" ||
+                isNaN(document.mobilenumbervalidation.phoneno.value) ||
+                document.mobilenumbervalidation.phoneno.value.length != 10) {
+                alert("If the mobile number has 10 digits.");
+                document.mobilenumbervalidation.phoneno.focus();
+                return false;
+            }
+            var email = document.mobilenumbervalidation.email_id.value;
+            atpos = email.indexOf("@");
+            dotpos = email.lastIndexOf(".");
+            if (email == "" || atpos < 1 || (dotpos - atpos < 2)) {
+                alert("Please enter correct email ID");
+                document.mobilenumbervalidation.email_id.focus();
+                return false;
+            }
+
+            return (true);
+        }
+    </script>
+</head>
+<br/>
+<h2 align="center"> Registration Form</h2>
+<form method="get" action="show.html" name="mobilenumbervalidation" onsubmit="return(validate());">
+
+    <table border="1" bgcolor="#585858" width="20%" align="center">
+        <tr>
+            <td>MobileNo</td>
+            <td><input type="text" name="mobileno" id="mobileno" size="30"></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" id="name" size="30"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" name="address" id="address" size="30"></td>
+            <tr>
+                <td>
+                    <td>
+                        <td align="center"><input type="submit" value="submit"></td>
+            </tr>
+    </table>
+</form>
+
+</html>
