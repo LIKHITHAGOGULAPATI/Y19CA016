@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>cyber book stores</title>
+</head>
+
+<body>
+
+
+    <table border="2" id=myTable>
+        <thead>
+            <tr bgcolor="green">
+                <th>book name</th>
+                <th>author</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td bgcolor="red">webtechnology
+                    <td bgcolor="red">chris
+                        <td bgcolor="red">450
+            </tr>
+            <tr id=ppl>
+                <td bgcolor="blue">ppl
+                    <td bgcolor="blue">aa
+                        <td bgcolor="blue">300
+            </tr>
+
+    </table>
+    <select name="l1" multiple>
+<option>webtechnology</option>
+<option>PPL</option>
+</select>
+    <form>
+        <input type="button" value="submit" onclick="fun()">
+
+    </form>
+
+    <script>
+        function fun() {
+            var k = 0;
+            var x = document.getElementById("l1");
+            var a = new Array(10);
+            for (i = 0; i < x.options.length; i++) {
+                if (x.options[i].selected == true) {
+                    a[k] = i; //x.options[i].text;
+                    k = k + 1;
+                }
+            }
+            //document.writeln("a");
+
+
+            var table = document.getElementById("cyber");
+
+
+            for (i = 0; i < k; i++) {
+                var row = table.insertRow(i);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                alert(i);
+                cell1.innerHTML = document.getElementById("myTable").rows[i + 1].cells[0].innerHTML;
+                //cell2.innerHTML = "NEW CELL2";
+
+
+            }
+
+        }
+    </script>
+    <table id="cyber">
+
+    </table>
+</body>
+
+
+
+</html>
