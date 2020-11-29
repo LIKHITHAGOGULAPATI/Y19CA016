@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bank Operations</title>
+    <script>
+        function dep() {
+            var amt, amount;
+            var balance = parseInt(document.f1.total.value);
+            amt = parseInt(window.prompt("Enter amount to deposit"));
+            amount = balance + amt;
+            document.f1.total.value = amount;
+        }
+
+        function withd() {
+            var amt, amount;
+            var balance = parseInt(document.f1.total.value);
+            amt = parseInt(window.prompt("Enter amount to withdraw"));
+            if (balance >= amt) {
+                amount = balance - amt;
+                document.f1.total.value = amount;
+            } else
+                window.alert("Insufficient Balance");
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Bank Application</h2>
+    <form name="f1">
+        <pre>
+        Account Number:<input type="password" name="Accno"><br>
+        Name:<input type="text" name="name"><br>
+        Address:<input type="text" name="Address"><br>
+        Opening Balance:<input type="text" id="balance" value=500 onMouseOver="balance.readonly=true"><br>
+        Available Balance:<input type="text" name="total" value=0><br>
+        <input type="button" name="deposit" value="Deposit" onclick="dep()">
+        <input type="button" name="withdraw" value="Withdraw" onclick="withd()">
+      </pre>
+    </form>
+</body>
+
+</html>
