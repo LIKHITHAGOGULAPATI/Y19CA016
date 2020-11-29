@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script language="javascript">
+        var count = 1;
+
+        function authenticate() {
+            alert(document.frm.user.value);
+            alert(document.frm.pass.value);
+            if (count <= 3) {
+                if (document.frm.user.value == "sss" && document.frm.pass.value == "sss") {
+                    document.writeln("welcome!");
+                } else {
+                    alert("Incorrect username and password");
+                    frm.user.value = "";
+                    frm.user.focus();
+                    frm.pass.value = "";
+                    count++;
+                }
+            } else {
+                alert("invlid login reload the page");
+                frm.user.value = "";
+                frm.pass.value = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="frm">
+        User Name: <input type="text" name="user"><br><br> Password: <input type="password" name="pass" value=""><br><br>
+        <input type="button" value="send" onClick="authenticate()">
+    </form>
+</body>
+
+</html>
